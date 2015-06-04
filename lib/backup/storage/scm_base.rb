@@ -46,7 +46,7 @@ module Backup
 
       # Reimplement to remove time from path
       def remote_path pkg = package
-        path
+        @remote_path ||= path.strip
       end
 
       def rsync
